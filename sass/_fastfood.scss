@@ -1,0 +1,91 @@
+.fastfood {
+  width: 100%;
+  background-image: url(../img/fastfood-img.jpg);
+  height: 100vh;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media only screen and (max-width: $bp-largest) {
+    width: 134rem;
+  }
+
+  /*CONTAINER OF SECTION*/
+
+  &__container {
+    width: 134rem;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  /*DESCRIPTION OF SECTION*/
+
+  &__caption {
+    display: flex;
+    flex-direction: column;
+    //padding-left: 5rem;
+    animation: moveFromLeft 2s ease;
+    backface-visibility: hidden;
+
+    @media only screen and (max-width: $bp-largest) {
+      padding-left: 5rem;
+    }
+  }
+
+  &__sub-title {
+    font-size: 3.5rem;
+    color: #fff;
+    font-family: $font-title;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 3rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 3rem;
+    }
+  }
+
+  &__title {
+    font-size: 12rem;
+    color: #fff;
+    text-transform: capitalize;
+    font-family: $font-default;
+    //letter-spacing: 3px;
+    margin-bottom: 3rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 10rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.7rem;
+    color: #fff;
+    font-family: $font-title;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 3rem;
+  }
+
+  /*BUTTON*/
+
+  &__btn {
+    font-size: 2.2rem;
+    font-family: $font-default;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: $color-red;
+    align-self: flex-start;
+    color: #fff;
+    padding: 1.5rem 2.5rem;
+    border-radius: 5rem;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: #fff;
+      color: $color-red;
+    }
+  }
+}

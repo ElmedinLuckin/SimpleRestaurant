@@ -1,0 +1,173 @@
+.header {
+  width: 100%;
+
+  &__container {
+    width: 134rem;
+    margin: 0 auto;
+    margin-top: 10rem;
+    @media only screen and (max-width: $bp-largest) {
+      padding: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      margin-top: 5rem;
+    }
+  }
+
+  &__cont-1 {
+    width: 100%;
+    display: flex;
+    margin-bottom: 8rem;
+
+    @media only screen and (max-width: $bp-large) {
+      flex-direction: column;
+    }
+  }
+
+  &__cont-2 {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__caption {
+    width: 50%;
+
+    @media only screen and (max-width: $bp-large) {
+      margin: 0 auto;
+      padding-bottom: 10rem;
+    }
+  }
+
+  /*PHOTO PLACE*/
+
+  &__photo {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+
+    @media only screen and (max-width: $bp-large) {
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  &__img {
+    width: 55rem;
+    height: 55rem;
+    border-radius: 50%;
+    object-fit: cover;
+    //overflow: hidden;
+    animation: moveFromRight 2s ease;
+    backface-visibility: hidden;
+
+    @media only screen and (max-width: $bp-largest) {
+      width: 45rem;
+      height: 45rem;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      width: 55rem;
+      height: 55rem;
+    }
+  }
+
+  /*HEADER TITLE, TEXT DESCRIPTION AND BUTTON*/
+
+  &__title {
+    font-size: 9rem;
+    font-family: $font-title;
+    font-weight: 300;
+    padding-bottom: 3rem;
+    animation: moveFromLeft 2s ease;
+    backface-visibility: hidden;
+
+    span {
+      color: $color-red;
+    }
+
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 7.5rem;
+      padding-bottom: 2.5rem;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      font-size: 11rem;
+    }
+  }
+
+  &__text {
+    font-size: 2rem;
+    font-family: $font-default;
+    //letter-spacing: 1px;
+    line-height: 2;
+    padding-bottom: 5rem;
+
+    @media only screen and (max-width: $bp-large) {
+      font-size: 3rem;
+    }
+  }
+
+    /*BUTTON*/
+
+
+  &__btn {
+    font-size: 3rem;
+    font-family: $font-default;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: $color-red;
+    color: #fff;
+    padding: 1.5rem 3rem;
+    border-radius: 5rem;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $color-black;
+    }
+
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 2.5rem;
+    }
+    @media only screen and (max-width: $bp-large) {
+      font-size: 3rem;
+    }
+  }
+
+  /*GALLERY WITH SOME IMAGES*/
+
+  &__gallery {
+    width: 134rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 4rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      width: 100rem;
+      margin: 0 auto;
+    }
+    @media only screen and (max-width: $bp-large) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    background-position: center;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(0.95);
+      filter: brightness(80%);
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      height: 50rem;
+    }
+  }
+}

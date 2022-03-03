@@ -1,0 +1,34 @@
+$color-red: #db545a;
+$color-grey: #e5e5e5;
+$color-grey-p: #a19f9f;
+$color-black: #111111;
+$color-grey-dark: #333333;
+$color-black-footer: #1a1a1a;
+
+$font-default: "Montserrat", sans-serif;
+$font-title: "Ubuntu", sans-serif;
+$font-number: "Kalam", cursive;
+
+$bp-largest: 83.75rem;
+$bp-large: 58.75rem;
+$bp-medium: 45rem;
+$bp-small: 33.75rem;
+$bp-smallest: 21.25rem;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // 1REM = 10PX
+}
+
+body {
+  box-sizing: inherit;
+  //background-color: blue;
+  margin: 0 auto;
+}

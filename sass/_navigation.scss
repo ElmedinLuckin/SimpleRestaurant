@@ -1,0 +1,57 @@
+.navigation {
+  width: 100%;
+
+  &__container {
+    width: 134rem;
+    height: 8rem;
+    margin: 0 auto;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+
+    @media only screen and (max-width: $bp-largest) {
+      padding: 2rem;
+    }
+  }
+
+  &__logo {
+    font-size: 4rem;
+    font-family: $font-title;
+    font-weight: 300;
+    text-transform: uppercase;
+    background-image: linear-gradient(to top, $color-red, rgb(248, 168, 168));
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    font-size: 2rem;
+    font-family: $font-default;
+    font-weight: 400;
+
+    @media only screen and (max-width: $bp-largest) {
+      display: none;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-black;
+    margin-left: 4rem;
+    letter-spacing: 2px;
+
+    &:hover {
+      color: #3482f7;
+    }
+  }
+}
+
+#active__link {
+  color: #3482f7;
+}

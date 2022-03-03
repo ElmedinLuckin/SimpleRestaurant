@@ -1,0 +1,711 @@
+@keyframes moveFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-300rem); }
+  80% {
+    opacity: 0.8;
+    transform: translateX(0rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(300rem); }
+  80% {
+    opacity: 0.8;
+    transform: translateX(0rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-500rem); }
+  80% {
+    opacity: 0.8;
+    transform: translateY(0rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes moveFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(500rem); }
+  80% {
+    opacity: 0.8;
+    transform: translateY(0rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: inherit;
+  margin: 0 auto; }
+
+.board {
+  width: 100%;
+  /*IMAGE FOR ENTIRE SECTION*/
+  /*CONTAINER OF SECTION*/
+  /*GRID BOXES*/
+  /*BUTTON*/ }
+  @media only screen and (max-width: 83.75rem) {
+    .board {
+      width: 134rem; } }
+  .board__img {
+    width: 100%;
+    height: 70rem;
+    object-fit: cover;
+    object-position: top;
+    display: block; }
+  .board__container {
+    width: 100%;
+    background-image: url(../img/black.jpg);
+    padding: 4rem 0; }
+  .board__boxes {
+    width: 134rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+    margin-top: -20rem; }
+    @media only screen and (max-width: 83.75rem) {
+      .board__boxes {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 10rem;
+        margin-top: -40rem;
+        grid-gap: 2rem; } }
+    @media only screen and (max-width: 58.75rem) {
+      .board__boxes {
+        margin-top: -45rem; } }
+    @media only screen and (max-width: 33.75rem) {
+      .board__boxes {
+        grid-template-columns: 1fr;
+        padding: 0 20rem; } }
+  .board__box {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(51, 51, 51, 0.6), rgba(51, 51, 51, 0.6));
+    padding: 3rem 3rem;
+    width: 100%; }
+  .board__title {
+    font-size: 3rem;
+    font-family: "Ubuntu", sans-serif;
+    color: #fff;
+    margin-bottom: 3rem; }
+    .board__title span {
+      font-size: 5rem;
+      background-color: #db545a;
+      padding: 1rem 3rem;
+      border-radius: 50%;
+      font-family: "Kalam", cursive;
+      margin-right: 1rem; }
+  .board__text {
+    font-size: 1.5rem;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: #a19f9f;
+    line-height: 1.5;
+    margin-bottom: 3rem; }
+  .board__btn {
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    border-bottom: 2px solid #db545a;
+    align-self: flex-start;
+    transition: all 0.3s; }
+    .board__btn:hover {
+      background-color: #db545a;
+      transform: scale(1.1);
+      padding: 0 1rem; }
+
+.fastfood {
+  width: 100%;
+  background-image: url(../img/fastfood-img.jpg);
+  height: 100vh;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*CONTAINER OF SECTION*/
+  /*DESCRIPTION OF SECTION*/
+  /*BUTTON*/ }
+  @media only screen and (max-width: 83.75rem) {
+    .fastfood {
+      width: 134rem; } }
+  .fastfood__container {
+    width: 134rem;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; }
+  .fastfood__caption {
+    display: flex;
+    flex-direction: column;
+    animation: moveFromLeft 2s ease;
+    backface-visibility: hidden; }
+    @media only screen and (max-width: 83.75rem) {
+      .fastfood__caption {
+        padding-left: 5rem; } }
+  .fastfood__sub-title {
+    font-size: 3.5rem;
+    color: #fff;
+    font-family: "Ubuntu", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 3rem; }
+    @media only screen and (max-width: 83.75rem) {
+      .fastfood__sub-title {
+        font-size: 3rem; } }
+  .fastfood__title {
+    font-size: 12rem;
+    color: #fff;
+    text-transform: capitalize;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 3rem; }
+    @media only screen and (max-width: 83.75rem) {
+      .fastfood__title {
+        font-size: 10rem; } }
+  .fastfood__text {
+    font-size: 1.7rem;
+    color: #fff;
+    font-family: "Ubuntu", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 3rem; }
+  .fastfood__btn {
+    font-size: 2.2rem;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #db545a;
+    align-self: flex-start;
+    color: #fff;
+    padding: 1.5rem 2.5rem;
+    border-radius: 5rem;
+    transition: all 0.2s; }
+    .fastfood__btn:hover {
+      background-color: #fff;
+      color: #db545a; }
+
+.footer {
+  width: 100%;
+  background-color: #1a1a1a;
+  /*CONTAINER OF ENTIRE SECTION*/
+  /*CONTAINER OF SECTION WHERE PUT IMAGE*/
+  /*ENTIRE BLACK DIV*/
+  /*ENTIRE RED DIV*/
+  /*PHOTO OF ALMOST HALF SECTION*/
+  /*CONTAINER OF OTHER PART OF SECTION*/
+  /*FORM*/
+  /*BUTTON*/
+  /*ICON*/ }
+  @media only screen and (max-width: 83.75rem) {
+    .footer {
+      width: 134rem; } }
+  .footer__container {
+    width: 100%;
+    display: flex; }
+    @media only screen and (max-width: 83.75rem) {
+      .footer__container {
+        width: 134rem; } }
+    @media only screen and (max-width: 45rem) {
+      .footer__container {
+        display: flex;
+        flex-direction: column; } }
+  .footer__photo {
+    width: 40%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    @media only screen and (max-width: 45rem) {
+      .footer__photo {
+        width: 134rem; } }
+  .footer__black {
+    width: 60%;
+    background-color: #1a1a1a;
+    height: 70rem;
+    z-index: 10; }
+  .footer__red {
+    width: 40%;
+    height: 70rem;
+    background-color: #db545a;
+    z-index: 10; }
+  .footer__img {
+    width: 50rem;
+    height: 60rem;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 100; }
+    @media only screen and (max-width: 45rem) {
+      .footer__img {
+        width: 70rem; } }
+  .footer__caption {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2rem solid #db545a; }
+    @media only screen and (max-width: 45rem) {
+      .footer__caption {
+        margin: 0 auto;
+        width: 100%;
+        padding-top: 5rem;
+        padding-bottom: 5rem; } }
+  .footer__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem; }
+  .footer__heading {
+    color: #fff;
+    font-size: 4rem;
+    font-family: "Ubuntu", sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #db545a;
+    margin-bottom: 3rem; }
+  .footer__text {
+    color: #fff;
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 3rem; }
+  .footer__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .footer__input {
+    align-self: flex-start;
+    padding: 2rem 10rem 2rem 1rem;
+    font-size: 2.2rem;
+    color: #a19f9f;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    margin-right: 2rem; }
+  .footer__btn {
+    font-size: 2.2rem;
+    font-family: "Montserrat", sans-serif;
+    font-family: 300;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #db545a;
+    color: #fff;
+    padding: 2rem;
+    transition: all 0.2s; }
+    .footer__btn:hover {
+      background-color: #fff;
+      color: #db545a; }
+  .footer__description {
+    display: flex;
+    justify-content: space-between; }
+  .footer__location {
+    padding: 3rem; }
+  .footer__sub-title {
+    font-size: 3rem;
+    font-family: "Ubuntu", sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 2rem; }
+  .footer__social {
+    padding: 3rem; }
+  .footer__icon {
+    color: #fff;
+    font-size: 4rem;
+    padding-right: 1rem;
+    margin-bottom: 2rem;
+    /*HOVERING ICON*/ }
+    .footer__icon-facebook:hover {
+      color: #385898; }
+    .footer__icon-twitter:hover {
+      color: #1d9bf0; }
+    .footer__icon-instagram:hover {
+      color: #ff5f7a; }
+    .footer__icon-google:hover {
+      color: #db4437; }
+
+.header {
+  width: 100%;
+  /*PHOTO PLACE*/
+  /*HEADER TITLE, TEXT DESCRIPTION AND BUTTON*/
+  /*BUTTON*/
+  /*GALLERY WITH SOME IMAGES*/ }
+  .header__container {
+    width: 134rem;
+    margin: 0 auto;
+    margin-top: 10rem; }
+    @media only screen and (max-width: 83.75rem) {
+      .header__container {
+        padding: 2rem; } }
+    @media only screen and (max-width: 58.75rem) {
+      .header__container {
+        margin-top: 5rem; } }
+  .header__cont-1 {
+    width: 100%;
+    display: flex;
+    margin-bottom: 8rem; }
+    @media only screen and (max-width: 58.75rem) {
+      .header__cont-1 {
+        flex-direction: column; } }
+  .header__cont-2 {
+    width: 100%;
+    margin: 0 auto; }
+  .header__caption {
+    width: 50%; }
+    @media only screen and (max-width: 58.75rem) {
+      .header__caption {
+        margin: 0 auto;
+        padding-bottom: 10rem; } }
+  .header__photo {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end; }
+    @media only screen and (max-width: 58.75rem) {
+      .header__photo {
+        justify-content: center;
+        width: 100%; } }
+  .header__img {
+    width: 55rem;
+    height: 55rem;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: moveFromRight 2s ease;
+    backface-visibility: hidden; }
+    @media only screen and (max-width: 83.75rem) {
+      .header__img {
+        width: 45rem;
+        height: 45rem; } }
+    @media only screen and (max-width: 58.75rem) {
+      .header__img {
+        width: 55rem;
+        height: 55rem; } }
+  .header__title {
+    font-size: 9rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    padding-bottom: 3rem;
+    animation: moveFromLeft 2s ease;
+    backface-visibility: hidden; }
+    .header__title span {
+      color: #db545a; }
+    @media only screen and (max-width: 83.75rem) {
+      .header__title {
+        font-size: 7.5rem;
+        padding-bottom: 2.5rem; } }
+    @media only screen and (max-width: 58.75rem) {
+      .header__title {
+        font-size: 11rem; } }
+  .header__text {
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    line-height: 2;
+    padding-bottom: 5rem; }
+    @media only screen and (max-width: 58.75rem) {
+      .header__text {
+        font-size: 3rem; } }
+  .header__btn {
+    font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #db545a;
+    color: #fff;
+    padding: 1.5rem 3rem;
+    border-radius: 5rem;
+    transition: all 0.2s; }
+    .header__btn:hover {
+      background-color: #111111; }
+    @media only screen and (max-width: 83.75rem) {
+      .header__btn {
+        font-size: 2.5rem; } }
+    @media only screen and (max-width: 58.75rem) {
+      .header__btn {
+        font-size: 3rem; } }
+  .header__gallery {
+    width: 134rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 4rem; }
+    @media only screen and (max-width: 83.75rem) {
+      .header__gallery {
+        width: 100rem;
+        margin: 0 auto; } }
+    @media only screen and (max-width: 58.75rem) {
+      .header__gallery {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media only screen and (max-width: 33.75rem) {
+      .header__gallery {
+        grid-template-columns: 1fr; } }
+  .header__image {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    background-position: center;
+    transition: all 0.2s; }
+    .header__image:hover {
+      transform: scale(0.95);
+      filter: brightness(80%); }
+    @media only screen and (max-width: 58.75rem) {
+      .header__image {
+        height: 50rem; } }
+
+.menu {
+  width: 100%;
+  /*cONTAINER OF ENTIRE SECTION*/
+  /*GRID OF ALL BOXES*/
+  /*ALL BOXES*/
+  /*BUTTON*/ }
+  .menu__container {
+    width: 134rem;
+    margin: 0 auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem; }
+  .menu__boxes {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem; }
+    @media only screen and (max-width: 33.75rem) {
+      .menu__boxes {
+        grid-template-columns: 1fr;
+        padding: 0 5rem; } }
+  .menu__title {
+    font-size: 7rem;
+    font-family: "Ubuntu", sans-serif;
+    letter-spacing: 2px;
+    padding-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    animation: moveFromRight 2s ease;
+    backface-visibility: hidden; }
+    .menu__title span {
+      color: #db545a; }
+  .menu__text {
+    font-size: 2.5rem;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-bottom: 5rem;
+    animation: moveFromLeft 2s ease;
+    backface-visibility: hidden; }
+  .menu__box {
+    height: 30rem;
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .menu__box-1 {
+      background-image: url(../img/burger-1.jpg); }
+    .menu__box-2 {
+      background-image: url(../img/burger-2.jpg); }
+    .menu__box-3 {
+      background-image: url(../img/burger-3.jpg); }
+    .menu__box-4 {
+      background-image: url(../img/burger-4.jpg); }
+    .menu__box-5 {
+      background-image: url(../img/burger-5.jpg); }
+    .menu__box-6 {
+      background-image: url(../img/burger-6.jpg); }
+  .menu__details {
+    width: 50%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(17, 17, 17, 0.6), rgba(17, 17, 17, 0.6)); }
+  .menu__photo {
+    width: 50%; }
+  .menu__heading {
+    font-size: 3rem;
+    color: #fff;
+    font-family: "Ubuntu", sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 2rem; }
+  .menu__price {
+    font-size: 2.5rem;
+    color: #db545a;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 2rem; }
+  .menu__btn {
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    background-color: #db545a;
+    letter-spacing: 1px;
+    padding: 1rem 3rem;
+    border-radius: 5rem;
+    font-weight: 700;
+    transition: all 0.2s; }
+    .menu__btn:hover {
+      background-color: #fff;
+      color: #db545a; }
+
+.navigation {
+  width: 100%; }
+  .navigation__container {
+    width: 134rem;
+    height: 8rem;
+    margin: 0 auto;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    @media only screen and (max-width: 83.75rem) {
+      .navigation__container {
+        padding: 2rem; } }
+  .navigation__logo {
+    font-size: 4rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    background-image: linear-gradient(to top, #db545a, #f8a8a8);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; }
+  .navigation__list {
+    list-style-type: none;
+    display: flex;
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400; }
+    @media only screen and (max-width: 83.75rem) {
+      .navigation__list {
+        display: none; } }
+  .navigation__link {
+    text-decoration: none;
+    color: #111111;
+    margin-left: 4rem;
+    letter-spacing: 2px; }
+    .navigation__link:hover {
+      color: #3482f7; }
+
+#active__link {
+  color: #3482f7; }
+
+.slider {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/pizzaroll.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /*CONTAINER OF ALL SECTION*/
+  /*ICON*/
+  /*BUTTON*/ }
+  @media only screen and (max-width: 83.75rem) {
+    .slider {
+      width: 134rem; } }
+  .slider__container {
+    width: 134rem;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; }
+  .slider__details {
+    background-color: #fff;
+    width: 35%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem;
+    border-radius: 1rem;
+    outline: 1px solid #fff;
+    outline-offset: 3rem; }
+    @media only screen and (max-width: 83.75rem) {
+      .slider__details {
+        margin-left: 10rem; } }
+    @media only screen and (max-width: 45rem) {
+      .slider__details {
+        margin-left: 20rem; } }
+  .slider__icon {
+    margin-bottom: 4rem; }
+    .slider__icon-img {
+      width: 8rem;
+      height: 8rem;
+      fill: #db545a; }
+    .slider__icon-side {
+      width: 10rem;
+      height: 4rem;
+      fill: #db545a;
+      cursor: pointer;
+      transition: all 0.2s; }
+      .slider__icon-side:hover {
+        fill: #fff;
+        background-color: #db545a; }
+  .slider__heading {
+    font-size: 4rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 4rem; }
+  .slider__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem; }
+  .slider__paragraph {
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    padding-left: 2rem;
+    padding-right: 2rem; }
+  .slider__btn {
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid #db545a;
+    border-radius: 5rem;
+    padding: 1rem 2rem;
+    margin-bottom: 4rem;
+    transition: all 0.2s; }
+    .slider__btn:hover {
+      background-color: #db545a;
+      color: #fff; }
+  .slider__item {
+    display: flex;
+    width: 4rem;
+    justify-content: space-between;
+    cursor: pointer; }
+  .slider__link {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #a19f9f;
+    border-radius: 50%;
+    transition: all 0.2s; }
+    .slider__link:hover {
+      background-color: #111111; }
